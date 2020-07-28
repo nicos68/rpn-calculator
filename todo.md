@@ -1,0 +1,18 @@
+- [x] Push
+- [ ] Operator
+    - [x] +
+    - [ ] -
+    - [ ] /
+    - [ ] *
+    - [ ] pow
+    - [ ] Cardinality
+- [ ] Execute
+    - [ ] Step
+    - [ ] Full
+- [ ] Validate
+    - [ ] Error if two successive operators
+    - [ ] Error if illegal operator cardinality
+- [ ] Operator button
+- [ ] Package for production
+- [ ] Debug
+- [ ] Logs

@@ -1,0 +1,14 @@
+<div class="calculator">
+  <h1>NPR Calculator</h1>
+  <mat-list>
+    <mat-list-item *ngFor="let e of stack">
+      <h3>{{e}}</h3>
+    </mat-list-item>
+  </mat-list>
+
+      <input [(ngModel)]="enteredValue">
+      <button mat-raised-button color="primary" (click)="push()">Push</button>
+      <button mat-raised-button color="primary" (click)="execute()">Execute</button>
+
+</div>
+
