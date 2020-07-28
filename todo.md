@@ -1,18 +1,20 @@
 - [x] Push
+- [ ] Delete stack
+- [ ] Create a new stack
+- [ ] List available stacks
 - [ ] Operator
     - [x] +
-    - [ ] -
+    - [x] -
     - [ ] /
     - [ ] *
     - [ ] pow
-    - [ ] Cardinality
+    - [x] Cardinality
 - [ ] Execute
     - [ ] Step
-    - [ ] Full
+    - [x] Full
 - [ ] Validate
     - [ ] Error if two successive operators
     - [ ] Error if illegal operator cardinality
 - [ ] Operator button
 - [ ] Package for production
-- [ ] Debug
 - [ ] Logs
