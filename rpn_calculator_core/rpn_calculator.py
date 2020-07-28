@@ -1,9 +1,20 @@
 class Operator(object):
-    def __init__(self, cardinality=2):
+    def __init__(self, symbol='', cardinality=2):
         self._cardinality = cardinality
+        self._symbol = symbol
+
+    @property
+    def symbol(self):
+        return self._symbol
+
+    def serialize(self):
+        return self._symbol
 
 
 class AddOperator(Operator):
+    def __init__(self):
+        super().__init__('+')
+
     def execute(self, left_operand, right_operand):
         return left_operand.execute() + right_operand.execute()
 
@@ -16,11 +27,17 @@ class Value(Operator):
     def execute(self):
         return self._value
 
+    def serialize(self):
+        return self._value
+
 class Calculator(object):
     def __init__(self):
         self._stack = []
         self._operator_registry = {
-            '+': AddOperator()
+            e.symbol: e
+            for e in [
+                AddOperator()
+            ]
         }
 
     def push(self, value):
@@ -38,3 +55,6 @@ class Calculator(object):
         result = operator.execute(left_operand, right_operand)
         self._stack.append(Value(result))
         return result
+
+    def serialize(self):
+        return [e.serialize() for e in self._stack]
