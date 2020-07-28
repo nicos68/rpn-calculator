@@ -16,5 +16,4 @@
     - [ ] Error if two successive operators
     - [ ] Error if illegal operator cardinality
 - [ ] Operator button
-- [ ] Package for production
 - [ ] Logs
