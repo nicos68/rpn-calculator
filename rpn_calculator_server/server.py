@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 from rpn_calculator_core.rpn_calculator import Calculator
 
 
@@ -8,7 +8,7 @@ calculator = Calculator()
 
 @app.route('/rpn/stack')
 def get_stack():
-    return calculator.serialize()
+    return jsonify(calculator.serialize())
 
 
 def main():
