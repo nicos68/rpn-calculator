@@ -35,4 +35,6 @@ class Calculator(object):
         operator = self._stack.pop()
         left_operand = self._stack.pop()
         right_operand = self._stack.pop()
-        return operator.execute(left_operand, right_operand)
+        result = operator.execute(left_operand, right_operand)
+        self._stack.append(result)
+        return result
