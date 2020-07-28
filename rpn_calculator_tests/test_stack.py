@@ -23,5 +23,6 @@ def test_operator():
 def test_execute(simple_calculator):
     simple_calculator.push('+')
     assert simple_calculator.execute() == 3
+    assert simple_calculator._stack[0].execute() == 3
 
 
